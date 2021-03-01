@@ -58,8 +58,9 @@ if(phil.isTouching(heartGroup)){
  
   score=score+1;
 }
-    if(keyDown("l")){
+    if(keyDown("l"&&"o"&&"v"&&"e")){
       time.velocityX=-10
+      swordGroup.destroyEach();
     }
   if(keyDown("a")){
     phil.x=phil.x-5;
@@ -112,7 +113,8 @@ if(phil.isTouching(heartGroup)){
 }
 
 function Sword(){
- if(World.frameCount%300===0){
+
+  if(World.frameCount%300===0){
    var sword
    sword=createSprite(1080,300,10,10);
    sword.addImage(swordImage);
